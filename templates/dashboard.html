@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            AI Resume Analyzer
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h1>Upload Resume</h1>
+
+        <br>
+
+        <form
+            action="/analyze"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <textarea
+                name="job_description"
+                rows="8"
+                placeholder="Paste Job Description Here..."
+                required
+            ></textarea>
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    name="resume"
+                    required
+                >
+
+            </div>
+
+            <br>
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+    </div>
+<footer style="text-align:center; padding:20px; color:#aaa;">
+    Built with FastAPI • AI Resume Analyzer
+</footer>
+</body>
+</html>

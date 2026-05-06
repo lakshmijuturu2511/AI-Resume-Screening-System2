@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <div class="logo">
+            AI Resume Analyzer
+        </div>
+
+        <div class="nav-links">
+            <a href="/dashboard">Dashboard</a>
+        </div>
+
+    </div>
+
+    <!-- RESULT CARD -->
+    <div class="dashboard-card">
+
+        <h1>ATS Score</h1>
+
+        <!-- SCORE -->
+        <div class="score">
+            {{ score }}%
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div style="
+            background:#222;
+            border-radius:10px;
+            overflow:hidden;
+            height:25px;
+            margin-bottom:30px;
+        ">
+
+            <div style="
+                width:{{ score }}%;
+                background:#00ff99;
+                height:25px;
+                text-align:center;
+                color:black;
+                font-weight:bold;
+            ">
+                {{ score }}%
+            </div>
+
+        </div>
+
+        <!-- MATCHED SKILLS -->
+        <h2>Matched Skills</h2>
+
+        <br>
+
+        {% for skill in matched %}
+
+            <p style="margin:8px 0;">
+                ✅ {{ skill }}
+            </p>
+
+        {% endfor %}
+
+        <br><br>
+
+        <!-- MISSING SKILLS -->
+        <h2>Missing Skills</h2>
+
+        <br>
+
+        {% for skill in missing %}
+
+            <p style="margin:8px 0;">
+                ❌ {{ skill }}
+            </p>
+
+        {% endfor %}
+
+        <br><br>
+
+        <!-- BUTTON -->
+        <a href="/dashboard" class="btn">
+            Analyze Another Resume
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="
+        text-align:center;
+        padding:20px;
+        color:#aaa;
+    ">
+        Built with FastAPI • AI Resume Analyzer
+    </footer>
+
+</body>
+</html>

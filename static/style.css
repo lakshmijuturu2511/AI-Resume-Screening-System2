@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #141e30, #243b55);
+    min-height:100vh;
+    color:white;
+}
+
+.navbar{
+    width:80%;
+    margin:20px auto;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding:20px 30px;
+    border-radius:15px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:50px;
+    text-align:center;
+}
+
+.hero{
+    margin-top:80px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 30px;
+    background:#00c6ff;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:#0072ff;
+}
+
+.form-box{
+    width:400px;
+    margin:60px auto;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.form-box h2{
+    margin-bottom:25px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#00c6ff;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0072ff;
+}
+
+.dashboard-card{
+    width:700px;
+    margin:40px auto;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding:40px;
+    border-radius:20px;
+}
+
+.score{
+    font-size:80px;
+
+    margin:20px 0;
+
+    font-weight:bold;
+
+    text-shadow:0 0 20px #00ff99;
+}
+
+.upload-box{
+    margin-top:30px;
+}
+.dashboard-card:hover{
+    transform:scale(1.01);
+    transition:0.3s;
+}
